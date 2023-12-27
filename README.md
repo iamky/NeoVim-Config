@@ -1,2 +1,2 @@
 # NeoVim-Config
-NeoVim config with plugins
+NeoVim config with plugins using Lazy
