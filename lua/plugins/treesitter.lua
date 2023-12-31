@@ -5,12 +5,11 @@ return {
     config = function()
       local config = require("nvim-treesitter.configs")
       config.setup({
-        ensure_installed = {"lua", "javascript","c","cpp","css","html","http","ini","json","php","scss","sql","typescript"},
+        ensure_installed = {"c","c_sharp","cmake","cpp","css","dart","go","html","java","javascript","json","kotlin","llvm","lua","php","scss","sql","svelte","swift","typescript","vim","vimdoc","query"},
         auto_install = true,
         highlight = { enable = true },
-        indent = { enable = true },  
+        indent = { enable = true },
       })
     end
   }
 }
-

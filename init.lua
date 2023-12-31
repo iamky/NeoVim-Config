@@ -1,4 +1,3 @@
---editor
 
 --lazy
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
@@ -16,11 +15,5 @@ vim.opt.rtp:prepend(lazypath)
 
 
 require("vim-options")
-local opts = {}
+
 require("lazy").setup("plugins", opts)
-
-
-
-
-
-
