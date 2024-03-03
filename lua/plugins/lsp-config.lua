@@ -1,3 +1,4 @@
+--mason
 return {
   {
     "williamboman/mason.nvim",
@@ -14,8 +15,8 @@ return {
     },
   },
   {
-    "neovim/nvim-lspconfig",
-    lazy = false,
+    "neovim/nvim-lspconfig", --LSPInfo to find if lsp is connected
+    lazy = false, --CTRL+XO to autocomplete
     config = function()
       local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
@@ -98,9 +99,9 @@ return {
       lspconfig.hls.setup({
         capabilites = capabilities,
       })
-      lspconfig.htmx.setup({
-        capabilites = capabilities,
-      })
+      --lspconfig.htmx.setup({
+       -- capabilites = capabilities,
+      --})
       lspconfig.intelephense.setup({
         capabilites = capabilities,
       })
@@ -138,7 +139,7 @@ return {
         capabilites = capabilities,
       })
 
-      vim.keymap.set("n", "h", vim.lsp.buf.hover, {}) -- h for hover
+      vim.keymap.set("n", "h", vim.lsp.buf.hover, {}) -- shift+h for hover
       vim.keymap.set("n", "<leader>gd", vim.lsp.buf.definition, {}) --space+gd for definition
       vim.keymap.set("n", "<leader>gr", vim.lsp.buf.references, {}) --space+gr for reference
       vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, {}) --space+ca for code actions

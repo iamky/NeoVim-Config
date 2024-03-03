@@ -15,8 +15,8 @@ return {
         },
       })
       local builtin = require("telescope.builtin")
-      vim.keymap.set("n", "<C-p>", builtin.find_files, {}) -- ctrl+p to search
-      vim.keymap.set("n", "<leader>fg", builtin.live_grep, {}) --space+lg to live grep
+      vim.keymap.set("n", "<C-f>", builtin.find_files, {}) -- ctrl+f to search
+      vim.keymap.set("n", "<leader>lg", builtin.live_grep, {}) --space+lg to live grep
 
       require("telescope").load_extension("ui-select")
     end,
